@@ -6,7 +6,8 @@ const Test = ({children}) => {
     console.log("Data2",data);
   return (
     <div>
-      <ChangerThemeBtn />
+      {/* <ChangerThemeBtn /> */}
+      {children}
     </div>
   )
 }
