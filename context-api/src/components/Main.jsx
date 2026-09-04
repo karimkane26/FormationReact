@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
-import ThemeContexte from '../context/ThemeContexte'
+import useTheme from '../hooks/useTheme'
 import LangContext from '../context/LangContext'
 const Main = () => {
-    const {theme, ChangementTheme} = useContext(ThemeContexte)
+    const {theme, ChangementTheme} = useTheme()
     const {lang, changeLang} = useContext(LangContext)
   return (
     <div>

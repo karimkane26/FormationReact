@@ -2,8 +2,6 @@ import { createContext, useState, useEffect } from "react";
 
 const ThemeContexte = createContext()
 
-const defaultheme = localStorage.getItem('theme' || "white")
-
 export const ThemeContexteProvider = ({children}) => {
     const [theme, setTheme] = useState('white')
 
@@ -13,7 +11,7 @@ export const ThemeContexteProvider = ({children}) => {
 
     useEffect(() => {
         localStorage.setItem("theme",theme)
-    })
+    },[theme])
    
 
     return (
