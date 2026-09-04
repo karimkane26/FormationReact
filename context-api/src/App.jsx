@@ -1,25 +1,28 @@
-import { useState } from 'react'
-import ThemeContexte from './context/ThemeContexte'
 import './index.css'
 import ChangerThemeBtn from './components/ChangerThemeBtn'
-import Test from './components/Test'
+import { LangContextProvider } from './context/LangContext'
 import { ThemeContexteProvider } from './context/ThemeContexte'
+import Main from './components/Main'
+import Footer from './components/Footer'
+
 function App() {
-
   return (
-    <div className='App'>
+    <div >
+      <LangContextProvider>
       <ThemeContexteProvider>
-        <Test>
+        {/* <Test>
           <h1>Bonjour</h1>
           <h1>Bonjour</h1>
           <h1>Bonjour</h1>
           <h1>Bonjour</h1>
-
-          
-
-        </Test>
-
+        </Test> */}
+        <ChangerThemeBtn />
+        <Main />
+        <hr />
+        <Footer />
       </ThemeContexteProvider>
+      </LangContextProvider>
+
     </div>
   )
 }
